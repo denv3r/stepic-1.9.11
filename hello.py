@@ -11,6 +11,7 @@ def wsgi_application(environ, start_response):
     for param, value in query_dict.items():
         print(param + '=' + value[0])
         body.append(param + '=' + value[0])
+    print body
     
-    start_response(status, headers )
+    start_response(status, headers)
     return body
